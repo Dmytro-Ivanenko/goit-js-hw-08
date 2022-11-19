@@ -7,6 +7,7 @@ const refs = {
   message: document.querySelector('[name = message]'),
 };
 
+// check data in storage
 const checkStorage = () => {
   let item = localStorage.getItem('feedback-form-state');
   if (item === null) {
@@ -21,7 +22,6 @@ const checkStorage = () => {
 checkStorage();
 
 // Event handlers
-
 const feedbackData = {
   email: '',
   message: '',
@@ -49,6 +49,5 @@ const submitHandler = e => {
 };
 
 // Events
-
 refs.form.addEventListener('input', throttle(formInputHandler, 500));
 refs.submitButton.addEventListener('click', submitHandler);
