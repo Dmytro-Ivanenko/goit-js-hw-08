@@ -18,8 +18,6 @@ player.setCurrentTime(getTimeFromStorage());
 player.on(
 	"timeupdate",
 	throttle(() => {
-		console.log("time updated!");
-
 		player.getCurrentTime().then(function (seconds) {
 			localStorage.setItem("videoplayer-current-time", seconds);
 		});
