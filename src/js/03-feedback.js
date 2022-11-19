@@ -1,5 +1,5 @@
 var throttle = require('lodash.throttle');
-debugger;
+
 const refs = {
   form: document.querySelector('.feedback-form'),
   submitButton: document.querySelector('.feedback-form button'),
