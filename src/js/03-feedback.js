@@ -36,6 +36,10 @@ const formInputHandler = e => {
 
 const submitHandler = e => {
   e.preventDefault();
+  if (refs.email.value === '' || refs.message.value === '') {
+    alert('Please fill in all fields');
+    return;
+  }
 
   localStorage.removeItem('feedback-form-state');
   refs.email.value = '';
